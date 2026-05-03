@@ -289,9 +289,11 @@ const Index = () => {
             <Button size="lg" className="text-lg px-8">
               Вызвать электрика
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
-              <Icon name="Phone" className="w-4 h-4 mr-2" />
-              Позвонить нам
+            <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent" asChild>
+              <a href="tel:+79326158860">
+                <Icon name="Phone" className="w-4 h-4 mr-2" />
+                Позвонить нам
+              </a>
             </Button>
           </div>
         </div>
