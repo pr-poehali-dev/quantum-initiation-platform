@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Music, Leaf, MapPin, Clock, Users } from "lucide-react";
+import Icon from "@/components/ui/icon";
 
 const Index = () => {
   return (
@@ -10,23 +10,26 @@ const Index = () => {
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold tracking-tight">ЗЕЛЁНЫЙ ЗВУК</div>
+            <div className="text-2xl font-bold tracking-tight flex items-center gap-2">
+              <Icon name="Zap" className="text-primary" size={24} />
+              ЭЛЕКТРИК МАСТЕР
+            </div>
             <div className="hidden md:flex items-center space-x-8">
+              <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
+                Услуги
+              </a>
+              <a href="#works" className="text-muted-foreground hover:text-foreground transition-colors">
+                Работы
+              </a>
               <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
                 О нас
-              </a>
-              <a href="#events" className="text-muted-foreground hover:text-foreground transition-colors">
-                Афиша
-              </a>
-              <a href="#menu" className="text-muted-foreground hover:text-foreground transition-colors">
-                Меню
               </a>
               <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
                 Контакты
               </a>
             </div>
-            <Button variant="outline" size="sm">
-              Забронировать
+            <Button size="sm">
+              Вызвать электрика
             </Button>
           </div>
         </div>
@@ -41,24 +44,24 @@ const Index = () => {
               <div className="space-y-8">
                 <div className="space-y-4">
                   <Badge variant="secondary" className="w-fit">
-                    <Music className="w-3 h-3 mr-1" />
-                    Живая музыка и растения
+                    <Icon name="Shield" className="w-3 h-3 mr-1" />
+                    Лицензированный электрик
                   </Badge>
                   <h1 className="text-6xl lg:text-8xl font-bold tracking-tight text-balance">
-                    Где музыка
-                    <span className="text-primary block">растёт вместе с нами</span>
+                    Электрика под
+                    <span className="text-primary block">ключ, быстро</span>
                   </h1>
                   <p className="text-xl text-muted-foreground max-w-2xl text-pretty">
-                    Уникальное сочетание живых акустических выступлений и ботанической красоты. Наслаждайтесь
-                    авторским кофе в окружении пышной зелени, открывая для себя новых артистов.
+                    Профессиональный монтаж электропроводки, щитов, розеток и освещения. Работаем в квартирах,
+                    домах и офисах. Гарантия на все виды работ.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="text-lg px-8">
-                    Забронировать столик
+                    Вызвать электрика
                   </Button>
                   <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
-                    Сегодняшнее шоу
+                    Наши работы
                   </Button>
                 </div>
               </div>
@@ -68,29 +71,29 @@ const Index = () => {
             <div className="lg:col-span-4 grid grid-cols-2 gap-2 auto-rows-fr h-fit self-center">
               <Card className="aspect-square bg-card overflow-hidden rounded-lg">
                 <img
-                  src="https://cdn.poehali.dev/templates/lp/acoustic-guitar-player-in-plant-filled-cafe.jpg"
-                  alt="Акустическое выступление"
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop"
+                  alt="Монтаж проводки"
                   className="w-full h-full object-cover"
                 />
               </Card>
               <Card className="aspect-square bg-primary/20 overflow-hidden rounded-lg">
                 <img
-                  src="https://cdn.poehali.dev/templates/lp/lush-green-plants-and-hanging-gardens-in-cafe.jpg"
-                  alt="Атмосфера с растениями"
+                  src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=300&h=300&fit=crop"
+                  alt="Электрический щит"
                   className="w-full h-full object-cover"
                 />
               </Card>
               <Card className="aspect-square bg-accent/20 overflow-hidden rounded-lg">
                 <img
-                  src="https://cdn.poehali.dev/templates/lp/artisan-coffee-and-pastries-on-wooden-table.jpg"
-                  alt="Авторский кофе"
+                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=300&h=300&fit=crop"
+                  alt="Установка розеток"
                   className="w-full h-full object-cover"
                 />
               </Card>
               <Card className="aspect-square bg-card overflow-hidden rounded-lg">
                 <img
-                  src="https://cdn.poehali.dev/templates/lp/intimate-music-venue-with-plants-and-warm-lighting.jpg"
-                  alt="Камерная площадка"
+                  src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=300&h=300&fit=crop"
+                  alt="Освещение"
                   className="w-full h-full object-cover"
                 />
               </Card>
@@ -103,75 +106,75 @@ const Index = () => {
       <section className="py-20 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">АТМОСФЕРА ЗЕЛЁНОГО ЗВУКА</h2>
+            <h2 className="text-4xl font-bold mb-4">ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
-              Наш подход, где музыка, природа и сообщество соединяются в единое целое
+              Надёжность, скорость и качество — наши главные принципы в каждом проекте
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="p-8 text-center">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Music className="w-8 h-8 text-primary" />
+                <Icon name="Clock" className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">1. Открывай</h3>
+              <h3 className="text-2xl font-bold mb-4">1. Быстро</h3>
               <p className="text-muted-foreground">
-                Мы помогаем открывать новые звуки и артистов в камерной обстановке, где каждая нота находит отклик.
+                Выезд мастера в день обращения. Аварийные вызовы — в течение 1 часа в любое время суток.
               </p>
             </Card>
 
             <Card className="p-8 text-center">
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Leaf className="w-8 h-8 text-accent" />
+                <Icon name="ShieldCheck" className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">2. Соединяйся</h3>
+              <h3 className="text-2xl font-bold mb-4">2. Безопасно</h3>
               <p className="text-muted-foreground">
-                Соединяйся с природой и сообществом в нашем ботаническом оазисе, созданном для осознанного слушания.
+                Все работы выполняются согласно нормам ПУЭ. Лицензия и допуск СРО. Гарантия до 3 лет.
               </p>
             </Card>
 
             <Card className="p-8 text-center">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-primary" />
+                <Icon name="Banknote" className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">3. Расти</h3>
+              <h3 className="text-2xl font-bold mb-4">3. Честно</h3>
               <p className="text-muted-foreground">
-                Наблюдай, как артисты и сообщество расцветают в пространстве, которое питает творчество и подлинные связи.
+                Фиксированные цены без скрытых доплат. Смета до начала работ. Оплата после сдачи объекта.
               </p>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Сетка событий */}
-      <section id="events" className="py-20">
+      {/* Секция услуг */}
+      <section id="services" className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between mb-12">
-            <h2 className="text-4xl font-bold">БЛИЖАЙШИЕ КОНЦЕРТЫ</h2>
-            <Button variant="outline">Вся афиша</Button>
+            <h2 className="text-4xl font-bold">НАШИ УСЛУГИ</h2>
+            <Button variant="outline">Все услуги</Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform">
               <div className="aspect-video bg-primary/20 relative overflow-hidden">
                 <img
-                  src="https://cdn.poehali.dev/templates/lp/indie-folk-singer-with-acoustic-guitar-in-intimate.jpg"
-                  alt="Выступление Анны Лесной"
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
+                  alt="Монтаж проводки"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                 />
-                <Badge className="absolute top-4 left-4">Сегодня</Badge>
+                <Badge className="absolute top-4 left-4">Популярное</Badge>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Анна Лесная</h3>
-                <p className="text-muted-foreground mb-4">Инди-фолк с ботаническими историями</p>
+                <h3 className="text-xl font-bold mb-2">Монтаж проводки</h3>
+                <p className="text-muted-foreground mb-4">Полная замена или новая электропроводка в квартире/доме</p>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    20:00
+                    <Icon name="Clock" className="w-4 h-4" />
+                    от 1 дня
                   </div>
                   <div className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    25 мест
+                    <Icon name="Banknote" className="w-4 h-4" />
+                    от 800 ₽/м²
                   </div>
                 </div>
               </div>
@@ -180,25 +183,25 @@ const Index = () => {
             <Card className="overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform">
               <div className="aspect-video bg-accent/20 relative overflow-hidden">
                 <img
-                  src="https://cdn.poehali.dev/templates/lp/jazz-trio-performing-in-plant-filled-venue.jpg"
-                  alt="Трио Оранжерея"
+                  src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop"
+                  alt="Электрощиты"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                 />
                 <Badge className="absolute top-4 left-4" variant="secondary">
-                  Завтра
+                  Срочно
                 </Badge>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Трио «Оранжерея»</h3>
-                <p className="text-muted-foreground mb-4">Джаз-фьюжн со звуками природы</p>
+                <h3 className="text-xl font-bold mb-2">Установка щитов</h3>
+                <p className="text-muted-foreground mb-4">Монтаж и замена электрощитов, автоматов и УЗО</p>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    19:30
+                    <Icon name="Clock" className="w-4 h-4" />
+                    от 2 часов
                   </div>
                   <div className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    30 мест
+                    <Icon name="Banknote" className="w-4 h-4" />
+                    от 3 000 ₽
                   </div>
                 </div>
               </div>
@@ -207,25 +210,25 @@ const Index = () => {
             <Card className="overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform">
               <div className="aspect-video bg-primary/20 relative overflow-hidden">
                 <img
-                  src="https://cdn.poehali.dev/templates/lp/electronic-ambient-musician-with-synthesizers-and-.jpg"
-                  alt="Мох и Схемы"
+                  src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=600&h=400&fit=crop"
+                  alt="Освещение"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                 />
                 <Badge className="absolute top-4 left-4" variant="outline">
-                  В эти выходные
+                  Под ключ
                 </Badge>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Мох и Схемы</h3>
-                <p className="text-muted-foreground mb-4">Эмбиент-электроника с датчиками растений</p>
+                <h3 className="text-xl font-bold mb-2">Монтаж освещения</h3>
+                <p className="text-muted-foreground mb-4">Точечные светильники, люстры, LED-подсветка и умный свет</p>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    21:00
+                    <Icon name="Clock" className="w-4 h-4" />
+                    от 1 часа
                   </div>
                   <div className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    40 мест
+                    <Icon name="Banknote" className="w-4 h-4" />
+                    от 500 ₽/шт
                   </div>
                 </div>
               </div>
@@ -239,34 +242,33 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6 text-balance">Выращиваем звук в живых пространствах</h2>
+              <h2 className="text-4xl font-bold mb-6 text-balance">Надёжная электрика для вашего дома и бизнеса</h2>
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p>
-                  «Зелёный Звук» — это больше, чем площадка. Это экосистема, где музыка и природа создают
-                  симбиотический опыт. Наше пространство украшают более 200 тщательно подобранных растений,
-                  которые реагируют на звуковые частоты, создавая живой, дышащий фон для камерных выступлений.
+                  Мы выполняем полный спектр электромонтажных работ: от замены розетки до проектирования
+                  и монтажа электрики в новостройках под ключ. Работаем аккуратно, без пыли и мусора.
                 </p>
                 <p>
-                  Каждый уголок рассказывает историю роста — от кофе с ферм, принадлежащих музыкантам, до
-                  акустического дизайна, который позволяет музыке и природе расцветать вместе.
+                  Каждый объект сдаём с замерами и проверкой всех цепей. Вы получаете исполнительную
+                  документацию и гарантийный лист на выполненные работы.
                 </p>
               </div>
               <div className="mt-8 grid grid-cols-2 gap-8">
                 <div>
-                  <div className="text-3xl font-bold text-primary">200+</div>
-                  <div className="text-muted-foreground">Живых растений</div>
+                  <div className="text-3xl font-bold text-primary">500+</div>
+                  <div className="text-muted-foreground">Объектов сдано</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-accent">50+</div>
-                  <div className="text-muted-foreground">Артистов в месяц</div>
+                  <div className="text-3xl font-bold text-accent">3 года</div>
+                  <div className="text-muted-foreground">Гарантия на работы</div>
                 </div>
               </div>
             </div>
             <div className="relative">
               <Card className="aspect-[4/5] overflow-hidden">
                 <img
-                  src="https://cdn.poehali.dev/templates/lp/lush-indoor-garden-cafe-with-hanging-plants-and-na.jpg"
-                  alt="Интерьер Зелёного Звука"
+                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=750&fit=crop"
+                  alt="Электрик за работой"
                   className="w-full h-full object-cover"
                 />
               </Card>
@@ -278,32 +280,34 @@ const Index = () => {
       {/* CTA секция */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-5xl font-bold mb-6 text-balance">Готовы испытать музыку, которая растёт?</h2>
+          <h2 className="text-5xl font-bold mb-6 text-balance">Нужен электрик? Позвоните прямо сейчас!</h2>
           <p className="text-xl text-muted-foreground mb-8 text-balance">
-            Присоединяйтесь к нашему сообществу любителей музыки и ценителей растений. Забронируйте место
-            для незабываемого вечера, где звук и природа объединяются.
+            Бесплатная консультация и выезд на объект. Рассчитаем стоимость работ в течение 30 минут.
+            Работаем без выходных.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8">
-              Забронировать столик
+              Вызвать электрика
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
-              <MapPin className="w-4 h-4 mr-2" />
-              Как добраться
+              <Icon name="Phone" className="w-4 h-4 mr-2" />
+              Позвонить нам
             </Button>
           </div>
         </div>
       </section>
 
       {/* Подвал */}
-      <footer className="bg-secondary/50 py-16">
+      <footer id="contact" className="bg-secondary/50 py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
-              <div className="text-2xl font-bold mb-4">ЗЕЛЁНЫЙ ЗВУК</div>
+              <div className="text-2xl font-bold mb-4 flex items-center gap-2">
+                <Icon name="Zap" className="text-primary" size={22} />
+                ЭЛЕКТРИК МАСТЕР
+              </div>
               <p className="text-muted-foreground mb-6 max-w-md">
-                Где музыка и природа создают незабываемые впечатления. Приходите на камерные выступления
-                в наш ботанический оазис.
+                Профессиональные электромонтажные работы для квартир, домов и офисов. Быстро, безопасно, с гарантией.
               </p>
               <div className="flex gap-4">
                 <Button variant="outline" size="sm">
@@ -313,31 +317,31 @@ const Index = () => {
                   ВКонтакте
                 </Button>
                 <Button variant="outline" size="sm">
-                  Рассылка
+                  WhatsApp
                 </Button>
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Адрес</h4>
+              <h4 className="font-semibold mb-4">Контакты</h4>
               <div className="space-y-2 text-muted-foreground">
-                <p>ул. Садовая, 123</p>
-                <p>Музыкальный квартал</p>
-                <p>Ежедневно 7:00 - 23:00</p>
+                <p>ул. Электрозаводская, 1</p>
+                <p>Ежедневно 8:00 - 22:00</p>
+                <p>Аварийно — круглосуточно</p>
                 <p>+7 (495) 123-45-67</p>
               </div>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Услуги</h4>
               <div className="space-y-2 text-muted-foreground">
-                <p>Живая музыка</p>
-                <p>Мастер-классы</p>
-                <p>Частные мероприятия</p>
-                <p>Резиденции артистов</p>
+                <p>Монтаж проводки</p>
+                <p>Установка щитов</p>
+                <p>Монтаж освещения</p>
+                <p>Аварийный вызов</p>
               </div>
             </div>
           </div>
           <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2025 Зелёный Звук. Все права защищены.</p>
+            <p>&copy; 2025 Электрик Мастер. Все права защищены.</p>
           </div>
         </div>
       </footer>
